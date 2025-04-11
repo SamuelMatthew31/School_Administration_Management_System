@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #2c3e50;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+  height: 45px;
+  width: auto;
+  object-fit: contain;
+}
+
+.signout-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #e74c3c;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.signout-button:hover {
+  background-color: #c0392b;
+}
+
+
+.main-content {
+  padding: 2rem 3rem;
+  width: 100%;
+}
+
+.section-form,
+.section-tabel {
+  margin-bottom: 2rem;
+}
+
+h2,
+h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+
+.form-krs {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 12px 20px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.form-krs label {
+  font-weight: 600;
+  text-align: right;
+  align-self: center;
+}
+
+.form-krs input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-krs input:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.form-krs button {
+  grid-column: 2 / 3;
+  padding: 12px;
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+.form-krs button:hover {
+  background-color: #27ae60;
+}
+
+
+.table-krs {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.table-krs th,
+.table-krs td {
+  border: 1px solid #ddd;
+  padding: 0.9rem;
+  text-align: center;
+}
+
+.table-krs th {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  font-weight: bold;
+}
+
+.table-krs tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+.table-krs button {
+  padding: 6px 12px;
+  margin: 0 2px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.table-krs button:first-child {
+  background-color: #2980b9;
+  color: white;
+}
+
+.table-krs button:first-child:hover {
+  background-color: #1c5980;
+}
+
+.table-krs button:last-child {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.table-krs button:last-child:hover {
+  background-color: #c0392b;
+}
+
