@@ -72,11 +72,16 @@ INSERT INTO users (email, password, role) VALUES
 -- Insert ke tabel dosen (user_id menyesuaikan ID auto-increment di atas, cek sesuai hasil insert_id)
 -- Contoh di bawah: asumsi user_id mulai dari 1
 INSERT INTO dosen (user_id, nik, nama, gelar, lulusan, telp, email, password, user_input, tanggal_input) VALUES
-(2, 'D1001', 'Dr. Agus Salim', 'M.T.', 'ITB', '081234500001', 'agus@kampus.ac.id', MD5('agus123'), 'admin@kampus.ac.id', CURDATE()),
-(3, 'D1002', 'Prof. Nina Lestari', 'Ph.D.', 'UI', '081234500002', 'nina@kampus.ac.id', MD5('nina123'), 'admin@kampus.ac.id', CURDATE()),
-(4, 'D1003', 'Ir. Widodo Santoso', 'S.T., M.Eng.', 'UGM', '081234500003', 'widodo@kampus.ac.id', MD5('widodo123'), 'admin@kampus.ac.id', CURDATE()),
-(5, 'D1004', 'Dina Kartika', 'M.Kom.', 'UNPAD', '081234500004', 'dina@kampus.ac.id', MD5('dina123'), 'admin@kampus.ac.id', CURDATE()),
-(6, 'D1005', 'Yusuf Hidayat', 'S.T., M.T.', 'ITS', '081234500005', 'yusuf@kampus.ac.id', MD5('yusuf123'), 'admin@kampus.ac.id', CURDATE());
+(1, 'D1001', 'Dr. Agus Salim', 'M.T.', 'ITB', '081234500001', 'agus@kampus.ac.id', MD5('agus123'), 'admin@kampus.ac.id', CURDATE()),
+(2, 'D1002', 'Prof. Nina Lestari', 'Ph.D.', 'UI', '081234500002', 'nina@kampus.ac.id', MD5('nina123'), 'admin@kampus.ac.id', CURDATE()),
+(3, 'D1003', 'Ir. Widodo Santoso', 'S.T., M.Eng.', 'UGM', '081234500003', 'widodo@kampus.ac.id', MD5('widodo123'), 'admin@kampus.ac.id', CURDATE()),
+(4, 'D1004', 'Dina Kartika', 'M.Kom.', 'UNPAD', '081234500004', 'dina@kampus.ac.id', MD5('dina123'), 'admin@kampus.ac.id', CURDATE()),
+(5, 'D1005', 'Yusuf Hidayat', 'S.T., M.T.', 'ITS', '081234500005', 'yusuf@kampus.ac.id', MD5('yusuf123'), 'admin@kampus.ac.id', CURDATE());
+
+SET FOREIGN_KEY_CHECKS = 0;
+TRUNCATE TABLE mahasiswa;
+TRUNCATE TABLE users;
+SET FOREIGN_KEY_CHECKS = 1;
 
 -- Insert ke tabel users
 INSERT INTO users (email, password, role) VALUES
@@ -111,17 +116,18 @@ INSERT INTO users (email, password, role) VALUES
 ('mahasiswa29@gmail.com', MD5('pass123'), 'mahasiswa'),
 ('mahasiswa30@gmail.com', MD5('pass123'), 'mahasiswa');
 
+
 -- Setelah insert, asumsikan ID user-nya berurutan dari 1 hingga 30.
 
 -- Insert ke tabel mahasiswa
 INSERT INTO mahasiswa (user_id, nim, nama, tahun_masuk, alamat, telp, email, password, user_input, tanggal_input) VALUES
-(2, 'M002', 'Ahmad Setiawan', 2022, 'Jl. Melati No. 1', '0811111111', 'mahasiswa01@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
-(3, 'M003', 'Budi Hartono', 2023, 'Jl. Mawar No. 2', '0812222222', 'mahasiswa02@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
-(4, 'M004', 'Citra Ayu', 2021, 'Jl. Kenanga No. 3', '0813333333', 'mahasiswa03@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
-(5, 'M005', 'Deni Ramadhan', 2020, 'Jl. Anggrek No. 4', '0814444444', 'mahasiswa04@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
-(6, 'M006', 'Eka Lestari', 2023, 'Jl. Teratai No. 5', '0815555555', 'mahasiswa05@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
-(32, 'M007', 'Fikri Alamsyah', 2022, 'Jl. Mawar No. 6', '0816666666', 'mahasiswa06@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
-(8, 'M008', 'Gita Prameswari', 2021, 'Jl. Melati No. 7', '0817777777', 'mahasiswa07@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(1, 'M001', 'Ahmad Setiawan', 2022, 'Jl. Melati No. 1', '0811111111', 'mahasiswa01@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(2, 'M002', 'Budi Hartono', 2023, 'Jl. Mawar No. 2', '0812222222', 'mahasiswa02@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(3, 'M003', 'Citra Ayu', 2021, 'Jl. Kenanga No. 3', '0813333333', 'mahasiswa03@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(4, 'M004', 'Deni Ramadhan', 2020, 'Jl. Anggrek No. 4', '0814444444', 'mahasiswa04@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(5, 'M005', 'Eka Lestari', 2023, 'Jl. Teratai No. 5', '0815555555', 'mahasiswa05@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(6, 'M006', 'Fikri Alamsyah', 2022, 'Jl. Mawar No. 6', '0816666666', 'mahasiswa06@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
+(7, 'M007', 'Gita Prameswari', 2021, 'Jl. Melati No. 7', '0817777777', 'mahasiswa07@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
 (9, 'M009', 'Hendri Saputra', 2020, 'Jl. Dahlia No. 8', '0818888888', 'mahasiswa08@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
 (10, 'M010', 'Indah Kurnia', 2023, 'Jl. Anggrek No. 9', '0819999999', 'mahasiswa09@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
 (11, 'M011', 'Joko Santoso', 2022, 'Jl. Kemuning No. 10', '0820000000', 'mahasiswa10@gmail.com', MD5('pass123'), 'admin@example.com', CURDATE()),
